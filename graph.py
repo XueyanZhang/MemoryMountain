@@ -26,8 +26,12 @@ def main():
     ax.set_ylabel("Size", fontsize=18, labelpad=20)
     ax.set_title("Memory Mountain\n", fontsize=22)
     ax.plot_surface(x, y, z2, cmap="jet")
-    plt.tight_layout()
-    plt.show()
+    # plt.tight_layout()
+    # plt.show()
+    ax.view_init(0, -90, 0)
+    plt.savefig("XZ.png", dpi=300)
+    ax.view_init(0, 0, 0)
+    plt.savefig("YZ.png", dpi=300)
 
 if __name__ == "__main__":
     main()
